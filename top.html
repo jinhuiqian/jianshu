@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简书 - 创作你的创作</title>
+</head>
+<link rel="shortcut icon" href="img/logo.ico" />
+<style>
+
+    .top{
+        height: 56px;
+        width: 1519.2px;
+        border-bottom: 1px solid  #F0F0F0;
+        margin: 0 0 20px 0;
+        min-height: 50px;
+        position: fixed;
+        bottom: 646.4px;
+        display: block;
+        z-index: 1;
+        background-color: white;
+        }
+
+    .logo > img{
+        position: fixed;
+        height: 56px;
+        width: 100px;
+        left: 40px;
+        margin-top: 1px;
+    }
+
+    .shouye{
+        position: fixed;
+        height: 22px;
+        width: 56px;
+        padding: 15px 15px 15px 15px;
+        left: 280px;
+        margin-top: 5px;
+        text-decoration: none;
+    }
+
+    .shouye > span{
+        position: fixed;
+        color: #EA6F5A;
+        font-size: 17px;
+        left: 320px;
+        margin-top: -2px;
+    }
+
+    .shouye > img{
+        position: fixed;
+        left: 295px;
+    }
+
+    .download{
+        position: fixed;
+        height: 22px;
+        width: 90px;
+        padding: 15px 15px 15px 15px;
+        left: 377px;
+        margin-top: 4px;
+        text-decoration: none;
+    }
+
+    .download > span{
+        position: fixed;
+        color: black;
+        font-size: 16px;
+        left: 417px;
+        margin-top: -2px;
+    }
+
+    .download >img{
+        position: fixed;
+        left: 393px;
+    }
+
+    .search{
+        position: fixed;
+        left: 500px;
+        font-size: 17px;
+        line-height: 20px;
+        height: 58px;
+        width: 255px;
+        margin: 0 10px 0 0;
+        padding: 0 0 0 15px;
+    }
+
+    .search > input{
+        height: 38px;
+        width: 240px;
+        border: 1px solid  #EEEEEE;
+        padding: 0 40px 0 20px;
+        position: relative;
+        top: 9px;
+        bottom: -9px;
+        right: 0px;
+        left: 0px;
+        display: block;
+        box-sizing: border-box;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        background-color:  #EEEEEE;
+        transition: width 400ms ease, background 400ms ease, border-radius 400ms ease;
+    }
+
+    input:focus{
+        width: 330px;
+    }
+
+    .search > span > img{
+        position: relative;
+        left: 205px;
+        top: -25px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .aa{
+        position: fixed;
+        height: 22px;
+        width: 119.25px;
+        padding: 15px 15px 15px 15px;
+        left: 1055px;
+        margin-top: 4px;
+        text-decoration: none;
+    }
+
+    .aa > img{
+        transform: scale(0.8);
+    }
+
+    .dm{
+        position: fixed;
+        height: 22px;
+        width: 119.25px;
+        padding: 15px 15px 15px 15px;
+        left: 1100px;
+        margin-top: 4px;
+        text-decoration: none;
+    }
+
+    #a{
+        transform: scale(1.3);
+    }
+
+    #b{
+        position: fixed;
+        transform: scale(0.6);
+        left: 1123px;
+    }
+
+    .dm > span{
+        position: fixed;
+        color: white;
+        font-size: 10px;
+        left: 1145px;
+        margin-top: 3.5px;
+    }
+
+    .login{
+        position: fixed;
+        height: 22px;
+        width: 119.25px;
+        padding: 15px 15px 15px 15px;
+        left: 1192px;
+        margin-top: 3.5px;
+        text-decoration: none;
+        color: #969696;
+        font-size: 15px;
+    }
+
+    .res{
+        position: fixed;
+        height: 38px;
+        width: 80px;
+        margin: 9px 5px 0 15px;
+        padding: 6px 12px 6px 12px;
+        left: 1260px;
+        text-decoration: none;
+        color: #EA6F5A;
+        font-size: 15px;
+        text-align: center;
+        border: 1px solid;
+        box-sizing: border-box;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .write{
+        position: fixed;
+        height: 40px;
+        width: 100px;
+        margin: 8px 12px 0 12px;
+        padding: 6px 12px 6px 12px;
+        left: 1356px;
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        text-align: center;
+        border: 1px solid;
+        box-sizing: border-box;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: #EC6149;
+    }
+
+    .left{
+        position: absolute;
+        left: 280px;
+        top: 58px;
+        height: auto;
+        width: 670px;
+        padding: 30px 0 0 15px;
+    }
+
+    .right{
+        position: absolute;
+        left: 920px;
+        top: 58px;
+        height: 715.2px;
+        width: 280px;
+        margin: 0 0 0 40px;
+        padding: 30px 0 0 0;
+    }
+
+    .pic{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .jyjj > img{
+        height: 50px;
+        width: 280px;
+    }
+
+    .qrcode{
+        height: 82px;
+        width: 280px;
+        border: 1px solid  #F0F0F0;
+        margin: 8px 0 30px 0;
+        padding: 10px 22px 10px 22px;
+        min-height: 1px;
+        box-sizing: border-box;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .qrcode > img{
+        float: left;
+        height: 60px;
+        width: 60px;
+    }
+
+    .info{
+        float: left;
+        color: black;
+        height: 44px;
+        width: 143px;
+        margin: 0 0 0 10px;
+        padding-top: 10px;
+    }
+
+    .title{
+        font-size: 15px;
+        line-height: 21.4285px;
+        height: 21.6px;
+        width: 143px;
+    }
+
+    .description{
+        font-size: 13px;
+        line-height: 18.5714px;
+        height: 18.4px;
+        width: 143px;
+        margin: 4px 0 0 0;
+    }
+
+    .rec{
+        font-size: 14px;
+        line-height: 20px;
+        color: #969696;
+        
+    }
+
+    .rec > span{
+        float: left;
+    }
+
+    .rec > a{
+        float: right;
+    }
+
+    .rec > a > img{
+        height: 14px;
+        width: 14px;
+        padding-right: 2px;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        height: 295px;
+        width: 280px;
+        margin: 0 0 20px 0;
+    }
+
+    .tx{
+        height: 48px;
+        width: 48px;
+        border: 1px solid  #DDDDDD;
+        box-sizing: border-box;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        margin: 15px 0 0 0;
+        float: left;
+    }
+
+    .name{
+        font-size: 14px;
+        line-height: 20px;
+        float: left;
+        color:  #2F2F2F;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+
+    .fwi{
+        font-size: 13px;
+        text-align: right;
+        float: right;
+        margin-top: 15px;
+        color: #42C02E;
+    }
+
+    .fwi > img{
+        height: 12px;
+        width: 12px;
+    }
+
+    .p2{
+        font-size: 12px;
+        line-height: 20px;
+        color:  #969696;
+        float: left;
+        margin-top: 40px;
+        margin-left: -28px;
+    }
+
+    .more{
+        font-size: 13px;
+        line-height: 18.5714px;
+        text-align: center;
+        background-color:  #F7F7F7;
+        background-position: 0% 0%;
+        color:  #787878;
+        position: absolute;
+        top: 750px;
+        bottom: -34.4px;
+        box-sizing: border-box;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        height: 34.4px;
+        width: 280px;
+        border: 1px solid  #DCDCDC;
+        padding: 7px 7px 7px 12px;
+    }
+
+    .bd{
+        height: 120px;
+        width: 625px;
+        border-bottom: 1px solid  #F0F0F0;
+        margin: 0 0 15px 0;
+        padding: 15px 2px 20px 0;
+    }
+
+    .morel{
+        font-size: 15px;
+        line-height: 21.4285px;
+        text-align: center;
+        background-color:  #9B9B9B;
+        background-position: 0% 0%;
+        color:  #FFFFFF;
+        height: 40px;
+        width: 625px;
+        margin: 30px 0 60px 0;
+        padding: 10px 15px 10px 15px;
+        box-sizing: border-box;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .bft{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 27px;
+        text-align: left;
+        color:  #2F2F2F;
+        height: 26.4px;
+        width: 623px;
+        margin: -7px 0 4px 0;
+    }
+
+    .det{
+        font-size: 13px;
+        line-height: 24px;
+        text-decoration: none solid rgb(153, 153, 153);
+        text-align: left;
+        color:  #999999;
+        height: 48px;
+        width: 623px;
+        margin: 5px 0 8px 0;
+    }
+
+    .data{
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+        width: 458px;
+        text-align: left;
+    }
+
+    .data-one{
+        margin: 0 10px 0 0;
+        color:  #EA6F5A;
+    }
+
+    .data-one > img{
+        height: 12px;
+        width: 12px;
+    }
+
+    .data-two{
+        margin: 0 10px 0 0;
+        color:  #B4B4B4;
+    }
+
+    .data-three{
+        margin: 0 10px 0 0;
+        color:  #B4B4B4;
+    }
+
+    .data-three > img{
+        height: 12px;
+        width: 12px;
+    }
+
+    .data-four{
+        margin: 0 10px 0 0;
+        color:  #B4B4B4;
+    }
+
+    .data-four > img{
+        height: 12px;
+        width: 12px;
+    }
+
+    .data-five{
+        margin: 0 10px 0 0;
+        color:  #B4B4B4;
+    }
+
+    .data-five > img{
+        height: 12px;
+        width: 12px;
+    }
+
+    .more{
+        font-size: 15px;
+        line-height: 21.4285px;
+    }
+
+    .footer{
+        height: 143.4px;
+        width: 960px;
+        margin: 0 -15px 0 -15px;
+        padding: 25px 0 0 0;
+    }
+
+    .s{
+        font-size: 13px;
+        line-height: 18.5714px;
+        color:  #969696;
+    }
+
+    .x{
+        font-size: 12px;
+        line-height: 17.1428px;
+        color:  #C8C8C8;
+        height: 90px;
+        width: 664.987px;
+        margin: 10px 0 0 0;
+    }
+    
+</style>
+
+<body>
+    <nav class="top">
+            <a class="logo" href="https://www.jianshu.com/"/><img src="img/jianshu.png" /></a>
+            <a class="shouye" href="https://www.jianshu.com/"/><img src="img/zz.svg"/><span>首页</span></a>
+            <a class="download" href="https://www.jianshu.com/apps"/><img src="img/sj.svg"/><span>下载App</span></a>
+
+            <div class="search">
+                <input type="text" class="input"  placeholder="搜索" style="outline:none">
+                <span><img src="img/big.svg" id="big"/></span>
+            </div>
+
+            <a class="aa" /><img src="img/a.svg"/></a>
+            <a class="dm" /><img id="a" src="img/dm.svg"/><img id="b" src="img/qp.svg"/><span>beta</span></a>
+            <a class="login">登录</a>
+            <a class="res" href="https://www.jianshu.com/sign_up">注册</a>
+            <a class="write" href="https://www.jianshu.com/writer#/"><img src="img/ymb.svg"><span>写文章</span></a>
+    </nav>
+
+    <div class="left">
+        <div class="bd">
+            <a class="bft">那个曾经满眼是我的男孩，就要和别人结婚了</a>
+            <p class="det">终于到了这一天，我也体会到曾经把自己捧在手心里的人娶了别人的感觉。 今天是他奶奶生日，邀请我一起去玩，母亲知道我不喜欢热闹，就说我不在家。 下午...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">发现父亲有小三后</a>
+            <p class="det">8上个月，刘艳发现父亲在外面有小三，而且肚里的孩子快要出来了。 一想到小三的孩子也有继承权，会分走爸妈辛苦赚来的钱，她就觉得气愤。 但刘艳不敢告...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">做抖音心得</a>
+            <p class="det">我的抖音大号已经积累了两万粉丝，并且稳定增长中，同时我也开了小号，准备做另一个方向。本以为靠着大号的经验，能快速做起来，但现实给了我狠狠的一巴掌...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">先谋生，后谋爱</a>
+            <p class="det">今天我妈发信息给我说有个媒婆要给我介绍对象，说对方二十五岁，家里开染布厂，家里房子没起，但是在长沙买了三套房，说如果我谈的话，明天就把他带到家里...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">我读海子:你来人间一趟，你要看看太阳</a>
+            <p class="det">海子曾说过，抒情就是血。他的所有作品都呈红色，都是用血浸泡过的，都是经过了火烙后生成的。 海子的抒情诗写得很美，充满了神启式的灵悟意味，笔下的事...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">晚安文案</a>
+            <p class="det">​​1、如果你掉进了黑暗里，你能做的，不过是静心等待，直到你的双眼适应黑暗。 2、从今天起，你要去做一个不动声色的人。不准情绪化，不准偷偷想念，...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">真正的成熟</a>
+            <p class="det">作家周国平说： “许多人所谓的成熟，不过是被习俗磨去了棱角，变得世故而实际了。那不是成熟，而是精神的早衰和个性的消亡。真正的成熟，应当是独特个性...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">如此，甚好。</a>
+            <p class="det">我被一个同事屏蔽掉了。 至于她什么时候屏蔽我的，我全然不知。 看着那根黑线三秒钟后，我果断删除了她。 在这之前，我一直以为我和她的关系还不错，虽...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">人和人的相处中，请记住这几条忠告！</a>
+            <p class="det">1.除非自己优秀，不然认识谁都不好使 之前有看到过一个问题，他只有几万的收入，他老婆却想让孩子读一年就好几万学费的幼儿园，因为他老婆说：圈子很重...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+        <div class="bd">
+            <a class="bft">弱的人都有一个特点“胆小”</a>
+            <p class="det">弱这个词，似乎随着时代的变化，把它从最开始的字面意思“弱”归到更深的一层含义。 弱的潜在意思是胆小，深剖析处在社会底层的人一个共性，那就是胆小懦...</p>
+            <div class="data">
+                <span class="data-one"><img src="img/zs.svg"/>49.4</span>
+                <a class="data-two">珋墨</a><a class="data-three"><img src="img/ltqp.svg"/>138</a>
+                <span class="data-four"><img src="img/love.svg"/>743</span><span class="data-five"><img src="img/pay.svg"/>5</span>
+            </div>
+        </div>
+
+        <div class="morel">
+            <a>阅读更多</a>
+        </div>
+
+        <div class="footer">
+            <div class="s">
+                <a>关于简书</a><em> · </em><a>联系我们</a><em> · </em><a>加入我们</a><em> · </em>
+                <a>简书出版</a><em> · </em><a>品牌与徽标</a><em> · </em><a>帮助中心</a><em> · </em><a>合作伙伴</a>
+                <div></div>
+            </div>
+            <div class="x">
+                ©2012-2020 上海佰集信息科技有限公司 / 简书 / 沪ICP备11018329号-5 / <img src="img/smrz.png" height="30px" width="60px" style="vertical-align:middle"/>沪公网安备31010402002252号 /<br/>
+                <img src="img/jb.png" height="30px" width="184.5px" style="vertical-align:middle"/><img src="img/wf.jpg" height="30px" width="183px" style="vertical-align:middle"/>简书网举报电话：021-34770013 / <img src="img/fanzha.jpg" height="30px" width="30px" style="vertical-align:middle"/>亲爱的市民朋
+                友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听 / <img src="img/zggsrz.png" height="30px" width="25.5px" style="vertical-align:middle"/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="right">
+        <div class="pic">
+            <a class="jyjj" href="https://www.jianshu.com/mobile/club"><img src="img/jshy.png"></a>
+            <a class="jyjj" href="https://www.jianshu.com/mobile/books"><img src="img/yxlz.png"></a>
+            <a class="jyjj" href="https://www.jianshu.com/publications"><img src="img/jsbq.png"></a>
+            <a class="jyjj" href="https://www.jianshu.com/c/e048f1a72e3d"><img src="img/jsdxt.png"></a>
+            <a class="qrcode" href="https://www.jianshu.com/apps"><img src="img/qrcode.png">
+                <div class="info">
+                    <div class="title">下载简书手机App > </div>
+                    <div class="description">随时随地发现和创造内容</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="rec"><span>推荐作者</span><a><img src="img/xh.svg">换一批</a></div>
+        <div class="list">
+            <div class="one">
+                <img class="tx" src="img/1.png"/>
+                <div><a class="name">正男</a><a class="fwi"><img src="img/j.svg"/>关注</a></div>
+                <p class="p2">写了484.2k字 · 1.6k喜欢</p>
+            </div>
+            <div class="one">
+                <div><img class="tx" src="img/2.png"/></div>
+                <div><a class="name">阿呆</a><a class="fwi"><img src="img/j.svg"/>关注</a></div>
+                <p class="p2">写了364.3k字 · 1.2k喜欢</p>
+            </div>
+            <div class="one">
+                <img class="tx" src="img/3.png"/>
+                <div><a class="name">小新</a><a class="fwi"><img src="img/j.svg"/>关注</a></div>
+                <p class="p2">写了197.9k字 · 2k喜欢</p>
+            </div>
+            <div class="one">
+                <img class="tx" src="img/4.png"/>
+                <div><a class="name">风间</a><a class="fwi"><img src="img/j.svg"/>关注</a></div>
+                <p class="p2">写了335.8k字 · 6.2k喜欢</p>
+            </div>
+            <div class="one">
+                <img class="tx" src="img/5.png"/>
+                <div><a class="name">妮妮</a><a class="fwi"><img src="img/j.svg"/>关注</a></div>
+                <p class="p2">写了51k字 · 152喜欢</p>
+            </div>
+        </div>
+        <a class="more">查看全部 > </a>
+    </div>
+</body>
+</html>
